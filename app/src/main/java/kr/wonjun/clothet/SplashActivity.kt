@@ -15,7 +15,7 @@ class SplashActivity : AppCompatActivity() {
             startActivity<RegisterActivity>()
         }
         splash_btn_login.setOnClickListener {
-
+            startActivity<ClosetActivity>()
         }
     }
 }

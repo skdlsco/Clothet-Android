@@ -6,5 +6,112 @@
     android:layout_height="match_parent"
     tools:context="com.clothet.ClosetActivity">
 
-    <include layout="@layout/toolbar" />
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/closet_gl_center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/closet_gl_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/activity_horizontal_margin" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/closet_gl_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/activity_horizontal_margin" />
+
+    <kr.wonjun.clothet.CategoryView
+        android:id="@+id/closet_category_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="@dimen/closet_vertical_margin"
+        app:img="@drawable/ic_closet_t"
+        app:layout_constraintDimensionRatio="W, 1:1"
+        app:layout_constraintLeft_toLeftOf="@id/closet_gl_left"
+        app:layout_constraintRight_toRightOf="@id/closet_gl_center"
+        app:layout_constraintTop_toBottomOf="@id/include"
+        app:text_en="T-shirt"
+        app:text_ko="티셔츠" />
+
+    <kr.wonjun.clothet.CategoryView
+        android:id="@+id/closet_category_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="@dimen/closet_vertical_margin"
+        app:img="@drawable/ic_closet_pullover"
+        app:layout_constraintDimensionRatio="W, 1:1"
+        app:layout_constraintLeft_toLeftOf="@id/closet_gl_center"
+        app:layout_constraintRight_toRightOf="@id/closet_gl_right"
+        app:layout_constraintTop_toBottomOf="@id/include"
+        app:text_en="Pull over"
+        app:text_ko="풀 오버" />
+
+    <kr.wonjun.clothet.CategoryView
+        android:id="@+id/closet_category_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="@dimen/closet_vertical_margin"
+        app:img="@drawable/ic_closet_shirts"
+        app:layout_constraintDimensionRatio="W, 1:1"
+        app:layout_constraintLeft_toLeftOf="@id/closet_gl_left"
+        app:layout_constraintRight_toRightOf="@id/closet_gl_center"
+        app:layout_constraintTop_toBottomOf="@id/closet_category_1"
+        app:text_en="Shirt"
+        app:text_ko="셔츠" />
+
+    <kr.wonjun.clothet.CategoryView
+        android:id="@+id/closet_category_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="@dimen/closet_vertical_margin"
+        app:img="@drawable/ic_closet_coat"
+        app:layout_constraintDimensionRatio="W, 1:1"
+        app:layout_constraintLeft_toLeftOf="@id/closet_gl_center"
+        app:layout_constraintRight_toRightOf="@id/closet_gl_right"
+        app:layout_constraintTop_toBottomOf="@id/closet_category_2"
+        app:text_en="Coat"
+        app:text_ko="코트" />
+
+    <kr.wonjun.clothet.CategoryView
+        android:id="@+id/closet_category_5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="@dimen/closet_vertical_margin"
+        app:img="@drawable/ic_closet_dress"
+        app:layout_constraintDimensionRatio="W, 1:1"
+        app:layout_constraintLeft_toLeftOf="@id/closet_gl_left"
+        app:layout_constraintRight_toRightOf="@id/closet_gl_center"
+        app:layout_constraintTop_toBottomOf="@id/closet_category_3"
+        app:text_en="Dress"
+        app:text_ko="드레스" />
+
+    <kr.wonjun.clothet.CategoryView
+        android:id="@+id/closet_category_6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="@dimen/closet_vertical_margin"
+        app:img="@drawable/ic_closet_pants"
+        app:layout_constraintDimensionRatio="W, 1:1"
+        app:layout_constraintLeft_toLeftOf="@id/closet_gl_center"
+        app:layout_constraintRight_toRightOf="@id/closet_gl_right"
+        app:layout_constraintTop_toBottomOf="@id/closet_category_4"
+        app:text_en="Pants"
+        app:text_ko="바지" />
 </android.support.constraint.ConstraintLayout>
