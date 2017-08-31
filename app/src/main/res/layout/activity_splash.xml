@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.clothet.SplashActivity">
+
+    <ImageView
+        android:id="@+id/splash_img"
+        android:layout_width="250dp"
+        android:layout_height="165dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="75dp"
+        android:src="@drawable/ic_login_logo" />
+
+    <LinearLayout
+        android:id="@+id/splash_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/login_horizontal_margin"
+        android:paddingStart="@dimen/login_horizontal_margin">
+
+        <EditText
+            android:id="@+id/splash_editText_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:background="@drawable/box_solid_white"
+            android:fontFamily="@font/nanumbarungothicbold"
+            android:hint="아이디 입력"
+            android:paddingBottom="11dp"
+            android:paddingEnd="22dp"
+            android:paddingStart="22dp"
+            android:paddingTop="11dp"
+            android:textSize="10sp" />
+
+        <EditText
+            android:id="@+id/splash_editText_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box_solid_white"
+            android:fontFamily="@font/nanumbarungothicbold"
+            android:hint="비밀번호 입력"
+            android:inputType="textPassword"
+            android:paddingBottom="11dp"
+            android:paddingEnd="22dp"
+            android:paddingStart="22dp"
+            android:paddingTop="11dp"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginTop="20dp"
+        android:paddingEnd="@dimen/login_horizontal_margin"
+        android:paddingStart="@dimen/login_horizontal_margin">
+
+        <Button
+            android:id="@+id/splash_btn_login"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/box_solid_white"
+            android:fontFamily="@font/nanumbarungothicbold"
+            android:text="로그인"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="10sp" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/splash_btn_register"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/box_stroke_white"
+            android:text="회원가입"
+            android:textColor="@color/colorWhite"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/login_horizontal_margin"
+        android:paddingStart="@dimen/login_horizontal_margin">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/box_solid_white">
+
+            <android.support.constraint.Guideline
+                android:id="@+id/gl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="65dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="14dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_login_fb"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/gl"
+                app:layout_constraintRight_toRightOf="@id/gl"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="페이스북으로 연결"
+                android:textColor="@color/colorBlack"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/box_solid_white">
+
+            <android.support.constraint.Guideline
+                android:id="@+id/gl2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="65dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="14dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_login_wifi"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/gl2"
+                app:layout_constraintRight_toRightOf="@id/gl2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="와이파이로 연결"
+                android:textColor="@color/colorBlack"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+</LinearLayout>
