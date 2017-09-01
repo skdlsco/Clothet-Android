@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kr.wonjun.clothet.Activity.InStyleActivity">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/inStyle_FAB"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:src="@drawable/ic_arrow_back"
+        app:backgroundTint="@color/colorWhite" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            tools:src="@drawable/ic_register_logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/colorPrimaryDark"
+            android:paddingBottom="10dp"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingTop="10dp">
+
+            <Button
+                android:id="@+id/inStyle_saveCody"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/box_stroke_white"
+                android:fontFamily="@font/nanumbarungothic"
+                android:text="코디 저장하기"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="@dimen/activity_horizontal_margin"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:id="@+id/inStyle_fancy_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/box_stroke_white">
+
+                <ImageView
+                    android:id="@+id/inStyle_fancy_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/inStyle_fancy_text"
+                    android:src="@drawable/ic_fancy_off" />
+
+                <TextView
+                    android:id="@+id/inStyle_fancy_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/nanumbarungothicbold"
+                    android:text="Fancy!"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
