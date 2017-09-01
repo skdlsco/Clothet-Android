@@ -9,12 +9,12 @@ import kr.wonjun.clothet.R
 import org.jetbrains.anko.textColor
 
 class InStyleActivity : AppCompatActivity() {
+    var isGotcha = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_in_style)
 
-        var isFancy = false
         inStyle_prev.setOnClickListener {
             onBackPressed()
         }
@@ -25,17 +25,21 @@ class InStyleActivity : AppCompatActivity() {
         }
 
         inStyle_gotcha_container.setOnClickListener {
-            if (isFancy) {
-                inStyle_gotcha_container.setBackgroundResource(R.drawable.box_stroke_white)
-                inStyle_gotcha_text.textColor = resources.getColor(R.color.colorWhite)
-                inStyle_gotcha_img.setImageResource(R.drawable.ic_fancy_off)
-                isFancy = false
-            } else {
-                inStyle_gotcha_container.setBackgroundResource(R.drawable.box_solid_white)
-                inStyle_gotcha_text.textColor = resources.getColor(R.color.colorPrimaryDark)
-                inStyle_gotcha_img.setImageResource(R.drawable.ic_fancy_on)
-                isFancy = true
-            }
+
+        }
+    }
+
+    fun changelike() {
+        if (isGotcha) {
+            inStyle_gotcha_container.setBackgroundResource(R.drawable.box_stroke_white)
+            inStyle_gotcha_text.textColor = resources.getColor(R.color.colorWhite)
+            inStyle_gotcha_img.setImageResource(R.drawable.ic_fancy_off)
+            isGotcha = false
+        } else {
+            inStyle_gotcha_container.setBackgroundResource(R.drawable.box_solid_white)
+            inStyle_gotcha_text.textColor = resources.getColor(R.color.colorPrimaryDark)
+            inStyle_gotcha_img.setImageResource(R.drawable.ic_fancy_on)
+            isGotcha = true
         }
     }
 }

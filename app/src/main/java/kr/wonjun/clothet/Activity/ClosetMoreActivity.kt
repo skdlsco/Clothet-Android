@@ -6,12 +6,13 @@ import android.support.v7.widget.GridLayoutManager
 import android.view.View
 import kotlinx.android.synthetic.main.activity_closet_more.*
 import kr.wonjun.clothet.Adapter.CodyRecyclerViewAdapter
+import kr.wonjun.clothet.Model.PostData
 import kr.wonjun.clothet.R
 import kr.wonjun.clothet.Model.ShoppingItem
 import org.jetbrains.anko.startActivity
 
 class ClosetMoreActivity : AppCompatActivity() {
-    val items = ArrayList<ShoppingItem>()
+    val items = ArrayList<PostData>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_closet_more)

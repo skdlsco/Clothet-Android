@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_save_cody.view.*
 import kr.wonjun.clothet.Activity.InStyleActivity
 import kr.wonjun.clothet.Adapter.CodyRecyclerViewAdapter
+import kr.wonjun.clothet.Model.PostData
 import kr.wonjun.clothet.Model.ShoppingItem
 
 import kr.wonjun.clothet.R
@@ -20,7 +21,7 @@ import org.jetbrains.anko.support.v4.startActivity
  * A simple [Fragment] subclass.
  */
 class SaveCodyFragment : Fragment() {
-    val items = ArrayList<ShoppingItem>()
+    val items = ArrayList<PostData>()
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view: View = inflater!!.inflate(R.layout.fragment_save_cody, container, false)

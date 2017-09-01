@@ -10,13 +10,14 @@ import android.widget.LinearLayout
 import kotlinx.android.synthetic.main.cody_item.view.*
 import kr.wonjun.clothet.R
 import android.util.TypedValue
+import kr.wonjun.clothet.Model.PostData
 import kr.wonjun.clothet.Model.ShoppingItem
 
 
 /**
  * Created by eka on 2017. 9. 1..
  */
-class CodyRecyclerViewAdapter(val context: Context, val items: ArrayList<ShoppingItem>) : RecyclerView.Adapter<CodyRecyclerViewAdapter.ViewHolder>() {
+class CodyRecyclerViewAdapter(val context: Context, val items: ArrayList<PostData>) : RecyclerView.Adapter<CodyRecyclerViewAdapter.ViewHolder>() {
     override fun getItemCount(): Int = items.size
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder? {
@@ -32,7 +33,7 @@ class CodyRecyclerViewAdapter(val context: Context, val items: ArrayList<Shoppin
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(item: ShoppingItem, context: Context) {
+        fun bind(item: PostData, context: Context) {
             val params: LinearLayout.LayoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
             val margin = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10f, context.resources.displayMetrics).toInt()
             if (position % 2 == 0)
@@ -40,8 +41,8 @@ class CodyRecyclerViewAdapter(val context: Context, val items: ArrayList<Shoppin
             else
                 params.marginStart = margin
             itemView.layoutParams = params
-            itemView.cody_img.setImageURI(Uri.parse(item.image))
-            itemView.cody_text.text = item.name
+            itemView.cody_img.setImageURI(Uri.parse(item.img))
+            itemView.cody_text.text = item.content
         }
     }
 
