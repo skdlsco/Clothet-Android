@@ -1,4 +1,4 @@
-package kr.wonjun.clothet
+package kr.wonjun.clothet.View
 
 import android.content.Context
 import android.content.res.TypedArray
@@ -6,6 +6,7 @@ import android.support.v7.widget.CardView
 import android.util.AttributeSet
 import kotlinx.android.synthetic.main.category.view.*
 import android.view.LayoutInflater
+import kr.wonjun.clothet.R
 
 
 /**
@@ -52,6 +53,10 @@ class CategoryView : CardView {
 
         val src: Int = typedArray.getResourceId(R.styleable.CategoryView_img, 0)
         category_img.setImageResource(src)
+
+        val height: Int = typedArray.getDimensionPixelSize(R.styleable.CategoryView_img_height, 0)
+        category_img.layoutParams.height = height
+        category_img.requestLayout()
 
         typedArray.recycle()
     }

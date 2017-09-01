@@ -4,5 +4,6 @@
         <attr name="img" format="reference|integer" />
         <attr name="text_ko" format="reference|string" />
         <attr name="text_en" format="reference|string" />
+        <attr name="img_height" format="reference|dimension" />
     </declare-styleable>
 </resources>
