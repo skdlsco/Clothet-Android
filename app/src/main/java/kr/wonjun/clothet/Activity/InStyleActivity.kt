@@ -30,7 +30,7 @@ class InStyleActivity : AppCompatActivity() {
             dialog.show()
         }
         inStyle_gotcha_container.setOnClickListener {
-
+            changelike()
         }
     }
 

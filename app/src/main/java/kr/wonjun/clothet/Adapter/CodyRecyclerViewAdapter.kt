@@ -3,6 +3,7 @@ package kr.wonjun.clothet.Adapter
 import android.content.Context
 import android.net.Uri
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,7 +42,8 @@ class CodyRecyclerViewAdapter(val context: Context, val items: ArrayList<PostDat
             else
                 params.marginStart = margin
             itemView.layoutParams = params
-            itemView.cody_img.setImageURI(Uri.parse(item.img))
+            itemView.cody_img.setImageResource(R.drawable.ic_login_logo)
+//            itemView.cody_img.setImageURI(Uri.parse(item.img))
             itemView.cody_text.text = item.content
         }
     }
