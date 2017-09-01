@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kr.wonjun.clothet">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,9 +18,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity.RegisterActivity" />
-        <activity android:name=".Activity.ClosetActivity" />
         <activity android:name=".Activity.MainActivity" />
-        <activity android:name=".Activity.InStyleActivity"></activity>
+        <activity android:name=".Activity.InStyleActivity" />
+        <activity android:name=".Activity.ClosetMoreActivity" />
+        <activity android:name=".Activity.StyleListActivity"></activity>
     </application>
 
 </manifest>

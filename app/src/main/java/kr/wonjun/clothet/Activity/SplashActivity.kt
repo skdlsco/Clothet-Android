@@ -25,12 +25,12 @@ class SplashActivity : AppCompatActivity() {
         }
     }
 
-    fun initApp(): Unit {
+    private fun initApp(): Unit {
         translateIcon()
         alphaLayout()
     }
 
-    fun translateIcon(): Unit {
+    private fun translateIcon(): Unit {
 
 
         val icon: ImageView = findViewById(R.id.splash_img)
@@ -42,20 +42,16 @@ class SplashActivity : AppCompatActivity() {
         icon.startAnimation(anim)
 
         val thread: Thread = Thread {
-            try {
-                var term = 0
-                while (term < 3000) {
-                    Thread.sleep(60)
-                    term += 100
-                }
-            } catch (e: InterruptedException) {
-            } finally {
+            var term = 0
+            while (term < 3000) {
+                Thread.sleep(60)
+                term += 100
             }
         }
         thread.start()
     }
 
-    fun alphaLayout(): Unit {
+    private fun alphaLayout(): Unit {
 
         val animlayout: LinearLayout = findViewById(R.id.splash_container)
 

@@ -4,5 +4,5 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="login_horizontal_margin">80dp</dimen>
     <dimen name="register_vertical_margin">15dp</dimen>
-    <dimen name="closet_vertical_margin">18dp</dimen>
+    <dimen name="closet_vertical_margin">16dp</dimen>
 </resources>

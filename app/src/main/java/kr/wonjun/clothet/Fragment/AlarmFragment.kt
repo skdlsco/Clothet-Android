@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_alarm.view.*
 import kr.wonjun.clothet.Adapter.AlarmRecyclerViewAdapter
-import kr.wonjun.clothet.AlarmItem
+import kr.wonjun.clothet.Model.AlarmItem
 import kr.wonjun.clothet.R
 import java.sql.Time
 import java.util.*

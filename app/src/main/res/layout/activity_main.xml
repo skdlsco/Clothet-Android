@@ -63,7 +63,7 @@
             android:layout_height="30dp"
             android:src="@drawable/ic_newsfeed_off"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/main_my_cody"
+            app:layout_constraintRight_toLeftOf="@id/main_mycloset"
             app:layout_constraintTop_toTopOf="@id/main_gl_top" />
 
         <TextView
@@ -78,10 +78,10 @@
             app:layout_constraintTop_toTopOf="@id/main_gl_bottom" />
 
         <ImageView
-            android:id="@+id/main_my_cody"
+            android:id="@+id/main_mycloset"
             android:layout_width="28dp"
             android:layout_height="28dp"
-            android:src="@drawable/ic_my_off"
+            android:src="@drawable/ic_mycloset_off"
             app:layout_constraintLeft_toRightOf="@id/main_newsfeed"
             app:layout_constraintRight_toLeftOf="@id/main_save_cody"
             app:layout_constraintTop_toTopOf="@id/main_gl_top" />
@@ -89,12 +89,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="내 코디"
+            android:text="내 옷장"
             android:textColor="@color/colorHalfText"
             android:textSize="8sp"
             app:layout_constraintBottom_toBottomOf="@id/main_gl_bottom"
-            app:layout_constraintLeft_toLeftOf="@+id/main_my_cody"
-            app:layout_constraintRight_toRightOf="@id/main_my_cody"
+            app:layout_constraintLeft_toLeftOf="@+id/main_mycloset"
+            app:layout_constraintRight_toRightOf="@id/main_mycloset"
             app:layout_constraintTop_toTopOf="@id/main_gl_bottom" />
 
         <ImageView
@@ -102,7 +102,7 @@
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:src="@drawable/ic_save_off"
-            app:layout_constraintLeft_toRightOf="@id/main_my_cody"
+            app:layout_constraintLeft_toRightOf="@id/main_mycloset"
             app:layout_constraintRight_toLeftOf="@id/main_alarm"
             app:layout_constraintTop_toTopOf="@id/main_gl_top" />
 

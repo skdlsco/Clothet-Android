@@ -9,16 +9,17 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_newsfeed.view.*
 import kr.wonjun.clothet.Activity.InStyleActivity
 import kr.wonjun.clothet.Adapter.CodyRecyclerViewAdapter
+import kr.wonjun.clothet.Model.ShoppingItem
 import kr.wonjun.clothet.R
 import org.jetbrains.anko.support.v4.startActivity
 
 class NewsfeedFragment : Fragment() {
-
+    private val items = ArrayList<ShoppingItem>()
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view: View = inflater!!.inflate(R.layout.fragment_newsfeed, container, false)
-        val adapter = CodyRecyclerViewAdapter(context)
+        val adapter = CodyRecyclerViewAdapter(context, items)
         view.newsfeed_recyclerView.adapter = adapter
         adapter.itemClick = object : CodyRecyclerViewAdapter.ItemClick {
             override fun onItemClick(view: View?, position: Int) {
@@ -30,7 +31,7 @@ class NewsfeedFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance(): MyCodyFragment = MyCodyFragment()
+        fun newInstance(): NewsfeedFragment = NewsfeedFragment()
     }
 
 }

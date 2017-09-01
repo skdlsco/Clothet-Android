@@ -5,7 +5,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kr.wonjun.clothet.AlarmItem
+import kr.wonjun.clothet.Model.AlarmItem
 import kr.wonjun.clothet.R
 import kotlinx.android.synthetic.main.alarm_item.view.*
 
