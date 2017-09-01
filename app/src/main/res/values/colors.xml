@@ -7,5 +7,6 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorGray">#bdbebe</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorHalfBlack">#88000000</color>
     <color name="colorHalfText">#f7c093</color>
 </resources>

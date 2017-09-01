@@ -5,6 +5,7 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_in_style.*
 import kr.wonjun.clothet.InfoDialog
 import kr.wonjun.clothet.Model.InfoData
+import kr.wonjun.clothet.PayingDialog
 import kr.wonjun.clothet.R
 import org.jetbrains.anko.textColor
 
@@ -24,6 +25,10 @@ class InStyleActivity : AppCompatActivity() {
             dialog.show()
         }
 
+        inStyle_pay.setOnClickListener {
+            val dialog: PayingDialog = PayingDialog(this, "content", 37000)
+            dialog.show()
+        }
         inStyle_gotcha_container.setOnClickListener {
 
         }

@@ -1,20 +1,122 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="370dp"
-    android:layout_height="330dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="330dp"
+    android:layout_height="370dp"
+    android:layout_gravity="center"
+    android:background="@drawable/box_pay"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="64dp"
+        android:background="@color/colorPrimaryDark"
         android:gravity="center_vertical"
         android:paddingStart="20dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="결제 진행" />
+            android:fontFamily="@font/nanumbarungothicbold"
+            android:text="결제 진행"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp" />
     </LinearLayout>
 
-    <android.support.v7.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></android.support.v7.widget.CardView>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingEnd="28dp"
+        android:paddingStart="28dp"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <android.support.v7.widget.CardView
+            app:cardCornerRadius="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="28dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/box_card">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:src="@drawable/logo_small_card" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:text="No. 123112232323"
+                    android:textColor="@color/colorWhite" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/paying_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumbarungothicbold"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp"
+            tools:text="코디1에 대한 결제 입니다." />
+
+        <TextView
+            android:id="@+id/paying_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumbarungothicbold"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/colorHalfBlack"
+            android:textSize="12sp"
+            tools:text="37,000 원" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumbarungothicbold"
+            android:text="결제하기를 눌러 진행해주세요"
+            android:textColor="@color/colorHalfBlack"
+            android:textSize="9sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp">
+
+            <Button
+                android:id="@+id/paying_paying"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/box_solid_orange"
+                android:fontFamily="@font/nanumbarungothic"
+                android:text="결제하기"
+                android:textColor="@color/colorWhite"
+                android:textSize="9sp" />
+
+            <View
+                android:layout_width="28dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/paying_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/box_stroke_orange"
+                android:fontFamily="@font/nanumbarungothic"
+                android:text="취소하기"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="9sp" />
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

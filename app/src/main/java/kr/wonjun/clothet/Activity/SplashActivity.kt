@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.activity_splash.*
 import kr.wonjun.clothet.APIRequest
 import kr.wonjun.clothet.InfoDialog
 import kr.wonjun.clothet.Model.InfoData
+import kr.wonjun.clothet.PayingDialog
 import kr.wonjun.clothet.R
 import okhttp3.ResponseBody
 import org.jetbrains.anko.startActivity
