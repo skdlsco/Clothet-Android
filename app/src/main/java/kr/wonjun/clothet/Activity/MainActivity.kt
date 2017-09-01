@@ -5,7 +5,9 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.PopupMenu
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
+import kr.wonjun.clothet.Adapter.ViewPagerAdapter
 import kr.wonjun.clothet.R
 import org.jetbrains.anko.startActivity
 
@@ -14,11 +16,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         setSupportActionBar(toolbar)
         supportActionBar?.let {
             it.setDisplayShowTitleEnabled(false)
         }
+
         toolbar_menu.setOnClickListener { showPopup(it) }
+        main_viewPager.adapter = ViewPagerAdapter(supportFragmentManager)
     }
 
     private fun showPopup(v: View) {
