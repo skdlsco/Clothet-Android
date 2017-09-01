@@ -1,4 +1,4 @@
-package kr.wonjun.clothet
+package kr.wonjun.clothet.Activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import android.widget.PopupMenu
 import kotlinx.android.synthetic.main.toolbar.*
+import kr.wonjun.clothet.R
 import org.jetbrains.anko.startActivity
 
 class MainActivity : AppCompatActivity() {
